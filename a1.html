@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes in JavaScript</title>
+    <style>
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background: #f0f4ff;
+            padding: 30px;
+            text-align: center;
+        }
+        h1{
+            color: #ff5a43;
+        }
+        p{
+            color: #555;
+        }
+        .card{
+            background: white;
+            border: 3px solid #ff5a43;
+            border-radius: 12px;
+            padding: 20px;
+            width: 200px;
+        }
+        .planet-name{
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+        }
+        .planet-fact{
+            color: #666; margin-top: 10px; font-size: 14px;
+        }
+        button{
+            background: #ff5a43;
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Plnet Cards</h1>
+    <p>use a JavaScript class to build planet cards!</p>
+    <button onclick="showplanets()">Show Planets!</button>
+    <div id="cards"></div>
+    <div id="card1"></div>
+    <div id="card2"></div>
+    <div id="card3"></div>
+    </div>
+    <script>
+        class Planet {
+            constructor(name, fact){
+                this.name = name
+                this.fact = fact
+            }
+            describe() {
+                return this.name + ": " + this.fact
+            }
+         }
+         function showplanets(){
+            let p1 = new Planet("earth", "the only planet with with life");
+            let p2 = new Planet("mars", "the red planet");
+            let p3 = new Planet("saturn", "the ringed planet");
+        
+     }
+    </script>
+</body>
+</html>
